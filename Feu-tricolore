@@ -1,0 +1,28 @@
+const int buton = 7;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  Serial.println("Hello, ESP32-C3!");
+  pinMode(buton, INPUT_PULLUP);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+}
+
+void loop() {
+  if(digitalRead(buton) == LOW) {
+  digitalWrite(4, HIGH);
+  delay(100);
+  digitalWrite(4, LOW);
+  delay(100);
+  digitalWrite(5, HIGH);
+  delay(100);
+  digitalWrite(5, LOW);
+  delay(100);
+  digitalWrite(6, HIGH);
+  delay(100);
+  digitalWrite(6, LOW);
+  delay(100);
+  }
+}
